@@ -1,0 +1,167 @@
+{
+  "contract_name": "IterableMapping",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        },
+        {
+          "name": "key",
+          "type": "uint256"
+        }
+      ],
+      "name": "contains",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        },
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "iterate_get",
+      "outputs": [
+        {
+          "name": "key",
+          "type": "uint256"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        },
+        {
+          "name": "key",
+          "type": "uint256"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "insert",
+      "outputs": [
+        {
+          "name": "replaced",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        },
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "iterate_next",
+      "outputs": [
+        {
+          "name": "r_keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        }
+      ],
+      "name": "iterate_start",
+      "outputs": [
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        },
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "iterate_valid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "IterableMapping.itmap storage"
+        },
+        {
+          "name": "key",
+          "type": "uint256"
+        }
+      ],
+      "name": "remove",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b5b6103d28061001c6000396000f300606060405236156100675763ffffffff60e060020a60003504166322c6faa4811461006957806375a3e8e81461008b5780637e523645146100b257806388d04437146100d7578063a21ab716146100f7578063c8fccc6914610114578063e11b7ea414610136575bfe5b610077600435602435610158565b604080519115158252519081900360200190f35b61009960043560243561016f565b6040805192835260208301919091528051918290030190f35b6100776004356024356044356101b6565b604080519115158252519081900360200190f35b6100e5600435602435610248565b60408051918252519081900360200190f35b6100e560043561029f565b60408051918252519081900360200190f35b6100776004356024356102b5565b604080519115158252519081900360200190f35b6100776004356024356102c3565b604080519115158252519081900360200190f35b600081815260208390526040812054115b92915050565b60006000836001018381548110151561018457fe5b906000526020600020906002020160005b505460008181526020869052604090206001015490925090505b9250929050565b600082815260208490526040812080546001909101839055818111156101df576001915061023f565b60018086018054916101f391908301610347565b600085815260208790526040902060018083019091558601805491925085918390811061021c57fe5b906000526020600020906002020160005b50556002850180546001019055600091505b5b509392505050565b60010160005b60018301548210801561028657506001830180548390811061026c57fe5b906000526020600020906002020160005b506001015460ff165b156102965760019091019061024e565b50805b92915050565b60006102ad82600019610248565b90505b919050565b600182015481105b92915050565b6000818152602083905260408120548015156102e25760009150610340565b60008381526020859052604081208181556001908101919091558085018054600019840190811061030f57fe5b906000526020600020906002020160005b50600101805460ff19169115159190911790556002840180546000190190555b5092915050565b815481835581811511610373576002028160020283600052602060002091820191016103739190610379565b5b505050565b6103a391905b8082111561039f576000815560018101805460ff1916905560020161037f565b5090565b905600a165627a7a7230582072c709fbbc2521eea54a9f47a833dd7a3b451b0bc3309e7ec884676e6ba5f4e30029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1498581654272
+}

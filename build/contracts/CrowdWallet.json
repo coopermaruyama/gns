@@ -1,0 +1,218 @@
+{
+  "contract_name": "CrowdWallet",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getTotalPoints",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "points",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "ethBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "contributor",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "addPoints",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "sumPoints",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "checkBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getPoints",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_contributor",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "AddPoints",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_msg",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Log",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b5b60008054600160a060020a03191632600160a060020a0390811691909117808355168152600160205260409020612710908190556003555b5b610504806100556000396000f300606060405236156100725763ffffffff60e060020a600035041663326bfcc18114610074578063358b8166146100965780634e6630b0146100c4578063507cd30f146100e65780635e7e7a25146101195780635f5152261461013b5780638da5cb5b14610169578063ee204abb14610195575bfe5b341561007c57fe5b6100846101c3565b60408051918252519081900360200190f35b341561009e57fe5b610084600160a060020a03600435166101ca565b60408051918252519081900360200190f35b34156100cc57fe5b6100846101dc565b60408051918252519081900360200190f35b34156100ee57fe5b610105600160a060020a03600435166024356101eb565b604080519115158252519081900360200190f35b341561012157fe5b61008461026f565b60408051918252519081900360200190f35b341561014357fe5b610084600160a060020a0360043516610275565b60408051918252519081900360200190f35b341561017157fe5b61017961048a565b60408051600160a060020a039092168252519081900360200190f35b341561019d57fe5b610084600160a060020a0360043516610499565b60408051918252519081900360200190f35b6003545b90565b60016020526000908152604090205481565b600160a060020a033016315b90565b6000805433600160a060020a0390811691161461020a57506000610269565b600160a060020a0383166000818152600160209081526040918290208054860190556003805486019055815185815291517ff1a06f53f360c72e0fa727a5ea15abed368ab2e469b811050cc8a122a385b6609281900390910190a25060015b92915050565b60035481565b600060006000600030600160a060020a031663ee204abb866000604051602001526040518263ffffffff1660e060020a0281526004018082600160a060020a0316600160a060020a03168152602001915050602060405180830381600087803b15156102dd57fe5b6102c65a03f115156102eb57fe5b50506040805180516020820181905282825260068284015260d060020a65706f696e747302606083015291519195506000805160206104b9833981519152925081900360800190a1604080516020810185905281815260018183015260f860020a603102606082015290516000805160206104b98339815191529181900360800190a160008311156104415760019350610481565b6102c65a03f1151561038e57fe5b5050604051519050838115156103a057fe5b60408051929091046020830181905281835260018383015260fa60020a600d02606084015290519093506000805160206104b98339815191529181900360800190a18130600160a060020a0316318115156103f757fe5b60408051929091046020830181905281835260018383015260f860020a603502606084015290519092506000805160206104b98339815191529181900360800190a1809350610481565b604080516000602082015281815260018183015260f860020a603302606082015290516000805160206104b98339815191529181900360800190a1600093505b5b505050919050565b600054600160a060020a031681565b600160a060020a0381166000908152600160205260409020545b9190505600dd970dd9b5bfe707922155b058a407655cb18288b807e2216442bca8ad83d6b5a165627a7a72305820d105122386f1679662f4994a2fc981b22316dc9b70f92779ab954850c2b6e4800029",
+  "networks": {
+    "1498581140822": {
+      "events": {
+        "0xf1a06f53f360c72e0fa727a5ea15abed368ab2e469b811050cc8a122a385b660": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_contributor",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "AddPoints",
+          "type": "event"
+        },
+        "0xdd970dd9b5bfe707922155b058a407655cb18288b807e2216442bca8ad83d6b5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_msg",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Log",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x8a8a80beedb5e6b835a09d80b89099d3136e52c7",
+      "updated_at": 1498581654485
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1498581654485
+}
