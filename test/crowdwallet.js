@@ -1,13 +1,4 @@
-const Promise = require('bluebird');
-const BN = require('bn.js');
-const HttpProvider = require(`ethjs-provider-http`);
-const EthRPC = require(`ethjs-rpc`);
-const EthQuery = require(`ethjs-query`);
-const ethRPC = new EthRPC(new HttpProvider(`http://localhost:8545`));
-const ethQuery = new EthQuery(new HttpProvider(`http://localhost:8545`));
 var CrowdWallet = artifacts.require("./CrowdWallet.sol");
-const sendRPC = Promise.promisify(ethRPC.sendAsync);
-
 
 contract('CrowdWallet', function(accounts) {
   it("should put 10000 points in the first account", function() {
@@ -89,9 +80,10 @@ contract('CrowdWallet', function(accounts) {
       return crowdwallet.checkBalance.call(contributor);
     })
     .then(function(wei) {
+      // The total 'pot' should be 10 eth, and this user has earned 50% of the
+      // points. Therefore, he should be entitled to 5 ETH.
       var balance = web3.fromWei(wei.toNumber(), 'ether');
-      var expectedBalance = (points / total) * contractEthBalance;
-      console.log('contractEthBalance: %s --- pointsSupply: %s -- contributorPoints: %s -- contributorBalance: %s', contractEthBalance, total, points, balance);
+
       assert.equal(
         balance,
         5,
