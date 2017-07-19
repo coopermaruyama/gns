@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "test": "scripts/test.sh"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +18,23 @@
     "ethjs-provider-http": "^0.1.6",
     "ethjs-query": "^0.2.6",
     "ethjs-rpc": "^0.1.5",
-    "truffle-hdwallet-provider": "^0.0.3"
+    "truffle-hdwallet-provider": "0.0.3",
+    "zeppelin-solidity": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.1",
+    "coveralls": "^2.13.1",
+    "ethereumjs-testrpc": "^3.9.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "moment": "^2.18.1",
+    "solidity-coverage": "^0.1.7",
+    "truffle": "^3.4.5"
   }
 }
